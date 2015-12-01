@@ -30,6 +30,7 @@ LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+	/*
 	WNDCLASSEX wcex;
 	wcex.cbSize = sizeof(WNDCLASSEX);
 	wcex.style = CS_HREDRAW | CS_VREDRAW;
@@ -55,10 +56,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			NULL);
 		*/
 
-		return 1;
-	}
+		//return 1;
+	//}
 
-	hInst = hInstance; // Store instance handle in our global variable
+	//hInst = hInstance; // Store instance handle in our global variable
 					   // The parameters to CreateWindow explained:
 					   // szWindowClass: the name of the application
 					   // szTitle: the text that appears in the title bar
@@ -70,44 +71,45 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 					   // hInstance: the first parameter from WinMain
 					   // NULL: not used in this application
 	//HWND hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,	500, 100, NULL,	NULL, hInstance, NULL);
-	HWND hWnd = CreateWindowEx(WS_EX_NOACTIVATE, szWindowClass, szTitle, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 500, 500, NULL, NULL, hInstance, NULL);
+	//HWND hWnd = CreateWindowEx(WS_EX_NOACTIVATE, szWindowClass, szTitle, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 500, 500, NULL, NULL, hInstance, NULL);
 
 
-	if (!hWnd)
-	{
+	//if (!hWnd)
+	//{
 		/*
 		System::Windows::Forms::MessageBox(NULL,
 			_T("Call to CreateWindow failed!"),
 			_T("Win32 Guided Tour"),
 			NULL);
 		*/
-		return 1;
-	}
+		//return 1;
+//	}
 
-	HWND hwndButton = CreateWindow(
-		L"BUTTON",  // Predefined class; Unicode assumed 
-		L"OK",      // Button text 
-		WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles 
-		10,         // x position 
-		10,         // y position 
-		100,        // Button width
-		100,        // Button height
-		hWnd,       // Parent window
-		NULL,       // No menu.
-		(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
-		NULL);      // Pointer not needed.
+	//HWND hwndButton = CreateWindow(
+		//L"BUTTON",  // Predefined class; Unicode assumed 
+		//L"OK",      // Button text 
+		//WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles 
+		//10,         // x position 
+		//10,         // y position 
+		//100,        // Button width
+		//100,        // Button height
+		//hWnd,       // Parent window
+		//NULL,       // No menu.
+		//(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
+		//NULL);      // Pointer not needed.
 
 
 	// The parameters to ShowWindow explained:
 	// hWnd: the value returned from CreateWindow
 	// nCmdShow: the fourth parameter from WinMain
-	ShowWindow(hWnd, nCmdShow);
-	SetForegroundWindow(hWnd);
+	//ShowWindow(hWnd, nCmdShow);
+	//SetForegroundWindow(hWnd);
 	// LOCK disables calls to SetForegroundWindow
-	LockSetForegroundWindow(LSFW_LOCK);
-	UpdateWindow(hWnd);
+	//LockSetForegroundWindow(LSFW_LOCK);
+	//UpdateWindow(hWnd);
+	
 	Keyboard::MyForm form;
-	//Application::Run(%form);
+	Application::Run(%form);
 	
 	
 	// Main message loop:

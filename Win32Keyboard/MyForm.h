@@ -99,6 +99,12 @@ namespace Keyboard {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->TopLevel = TRUE;
+			this->ShowInTaskbar = TRUE;
+			this->AccessibleName = L"Win32Keyboard";
+			this->BringToFront();
+			
+
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -146,8 +152,8 @@ namespace Keyboard {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Q";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->UseWaitCursor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			//this->button1->UseWaitCursor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button2
 			// 
@@ -159,7 +165,8 @@ namespace Keyboard {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"I";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->UseWaitCursor = true;
+			//this->button2->UseWaitCursor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button3
 			// 
@@ -171,7 +178,8 @@ namespace Keyboard {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"U";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->UseWaitCursor = true;
+			//this->button3->UseWaitCursor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button4
 			// 
@@ -183,7 +191,8 @@ namespace Keyboard {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Y";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->UseWaitCursor = true;
+			//this->button4->UseWaitCursor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button5
 			// 
@@ -195,7 +204,8 @@ namespace Keyboard {
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"T";
 			this->button5->UseVisualStyleBackColor = true;
-			this->button5->UseWaitCursor = true;
+			//this->button5->UseWaitCursor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button6
 			// 
@@ -207,7 +217,8 @@ namespace Keyboard {
 			this->button6->TabIndex = 5;
 			this->button6->Text = L"R";
 			this->button6->UseVisualStyleBackColor = true;
-			this->button6->UseWaitCursor = true;
+			//this->button6->UseWaitCursor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button7
 			// 
@@ -219,7 +230,8 @@ namespace Keyboard {
 			this->button7->TabIndex = 6;
 			this->button7->Text = L"E";
 			this->button7->UseVisualStyleBackColor = true;
-			this->button7->UseWaitCursor = true;
+			//this->button7->UseWaitCursor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button8
 			// 
@@ -231,8 +243,8 @@ namespace Keyboard {
 			this->button8->TabIndex = 7;
 			this->button8->Text = L"W";
 			this->button8->UseVisualStyleBackColor = true;
-			this->button8->UseWaitCursor = true;
-			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			//this->button8->UseWaitCursor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button9
 			// 
@@ -244,7 +256,8 @@ namespace Keyboard {
 			this->button9->TabIndex = 8;
 			this->button9->Text = L"O";
 			this->button9->UseVisualStyleBackColor = true;
-			this->button9->UseWaitCursor = true;
+			//this->button9->UseWaitCursor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button10
 			// 
@@ -256,7 +269,8 @@ namespace Keyboard {
 			this->button10->TabIndex = 9;
 			this->button10->Text = L"P";
 			this->button10->UseVisualStyleBackColor = true;
-			this->button10->UseWaitCursor = true;
+			//this->button10->UseWaitCursor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button11
 			// 
@@ -268,7 +282,8 @@ namespace Keyboard {
 			this->button11->TabIndex = 10;
 			this->button11->Text = L"J";
 			this->button11->UseVisualStyleBackColor = true;
-			this->button11->UseWaitCursor = true;
+			//this->button11->UseWaitCursor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button12
 			// 
@@ -280,7 +295,8 @@ namespace Keyboard {
 			this->button12->TabIndex = 11;
 			this->button12->Text = L"H";
 			this->button12->UseVisualStyleBackColor = true;
-			this->button12->UseWaitCursor = true;
+			//this->button12->UseWaitCursor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button13
 			// 
@@ -292,7 +308,8 @@ namespace Keyboard {
 			this->button13->TabIndex = 12;
 			this->button13->Text = L"G";
 			this->button13->UseVisualStyleBackColor = true;
-			this->button13->UseWaitCursor = true;
+			//this->button13->UseWaitCursor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button14
 			// 
@@ -304,7 +321,8 @@ namespace Keyboard {
 			this->button14->TabIndex = 13;
 			this->button14->Text = L"F";
 			this->button14->UseVisualStyleBackColor = true;
-			this->button14->UseWaitCursor = true;
+			//this->button14->UseWaitCursor = true;
+			this->button14->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button15
 			// 
@@ -316,7 +334,8 @@ namespace Keyboard {
 			this->button15->TabIndex = 14;
 			this->button15->Text = L"D";
 			this->button15->UseVisualStyleBackColor = true;
-			this->button15->UseWaitCursor = true;
+			//this->button15->UseWaitCursor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button16
 			// 
@@ -328,7 +347,8 @@ namespace Keyboard {
 			this->button16->TabIndex = 15;
 			this->button16->Text = L"S";
 			this->button16->UseVisualStyleBackColor = true;
-			this->button16->UseWaitCursor = true;
+			//this->button16->UseWaitCursor = true;
+			this->button16->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button17
 			// 
@@ -340,7 +360,8 @@ namespace Keyboard {
 			this->button17->TabIndex = 16;
 			this->button17->Text = L"A";
 			this->button17->UseVisualStyleBackColor = true;
-			this->button17->UseWaitCursor = true;
+			//this->button17->UseWaitCursor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button18
 			// 
@@ -352,7 +373,8 @@ namespace Keyboard {
 			this->button18->TabIndex = 17;
 			this->button18->Text = L"K";
 			this->button18->UseVisualStyleBackColor = true;
-			this->button18->UseWaitCursor = true;
+			//this->button18->UseWaitCursor = true;
+			this->button18->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button19
 			// 
@@ -364,7 +386,8 @@ namespace Keyboard {
 			this->button19->TabIndex = 18;
 			this->button19->Text = L"L";
 			this->button19->UseVisualStyleBackColor = true;
-			this->button19->UseWaitCursor = true;
+			//this->button19->UseWaitCursor = true;
+			this->button19->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button20
 			// 
@@ -376,7 +399,8 @@ namespace Keyboard {
 			this->button20->TabIndex = 19;
 			this->button20->Text = L"N";
 			this->button20->UseVisualStyleBackColor = true;
-			this->button20->UseWaitCursor = true;
+			//this->button20->UseWaitCursor = true;
+			this->button20->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button21
 			// 
@@ -388,7 +412,8 @@ namespace Keyboard {
 			this->button21->TabIndex = 20;
 			this->button21->Text = L"B";
 			this->button21->UseVisualStyleBackColor = true;
-			this->button21->UseWaitCursor = true;
+			//this->button21->UseWaitCursor = true;
+			this->button21->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button22
 			// 
@@ -400,7 +425,8 @@ namespace Keyboard {
 			this->button22->TabIndex = 21;
 			this->button22->Text = L"V";
 			this->button22->UseVisualStyleBackColor = true;
-			this->button22->UseWaitCursor = true;
+			//this->button22->UseWaitCursor = true;
+			this->button22->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button23
 			// 
@@ -412,7 +438,8 @@ namespace Keyboard {
 			this->button23->TabIndex = 22;
 			this->button23->Text = L"C";
 			this->button23->UseVisualStyleBackColor = true;
-			this->button23->UseWaitCursor = true;
+			//this->button23->UseWaitCursor = true;
+			this->button23->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button24
 			// 
@@ -424,7 +451,8 @@ namespace Keyboard {
 			this->button24->TabIndex = 23;
 			this->button24->Text = L"X";
 			this->button24->UseVisualStyleBackColor = true;
-			this->button24->UseWaitCursor = true;
+			//this->button24->UseWaitCursor = true;
+			this->button24->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button25
 			// 
@@ -436,7 +464,8 @@ namespace Keyboard {
 			this->button25->TabIndex = 24;
 			this->button25->Text = L"Z";
 			this->button25->UseVisualStyleBackColor = true;
-			this->button25->UseWaitCursor = true;
+			//this->button25->UseWaitCursor = true;
+			this->button25->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button26
 			// 
@@ -448,7 +477,8 @@ namespace Keyboard {
 			this->button26->TabIndex = 25;
 			this->button26->Text = L"M";
 			this->button26->UseVisualStyleBackColor = true;
-			this->button26->UseWaitCursor = true;
+			//this->button26->UseWaitCursor = true;
+			this->button26->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button27
 			// 
@@ -458,10 +488,10 @@ namespace Keyboard {
 			this->button27->Name = L"button27";
 			this->button27->Size = System::Drawing::Size(240, 73);
 			this->button27->TabIndex = 26;
-			this->button27->Text = L"SPACE";
+			this->button27->Text = L"Space";
 			this->button27->UseVisualStyleBackColor = true;
-			this->button27->UseWaitCursor = true;
-			this->button27->Click += gcnew System::EventHandler(this, &MyForm::button27_Click);
+			//this->button27->UseWaitCursor = true;
+			this->button27->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button28
 			// 
@@ -473,7 +503,8 @@ namespace Keyboard {
 			this->button28->TabIndex = 27;
 			this->button28->Text = L"Backspace";
 			this->button28->UseVisualStyleBackColor = true;
-			this->button28->UseWaitCursor = true;
+			//this->button28->UseWaitCursor = true;
+			this->button28->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button29
 			// 
@@ -485,7 +516,8 @@ namespace Keyboard {
 			this->button29->TabIndex = 28;
 			this->button29->Text = L"Enter";
 			this->button29->UseVisualStyleBackColor = true;
-			this->button29->UseWaitCursor = true;
+			//this->button29->UseWaitCursor = true;
+			this->button29->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// button30
 			// 
@@ -495,9 +527,10 @@ namespace Keyboard {
 			this->button30->Name = L"button30";
 			this->button30->Size = System::Drawing::Size(76, 73);
 			this->button30->TabIndex = 29;
-			this->button30->Text = L"\?";
+			this->button30->Text = L"\x2191";
 			this->button30->UseVisualStyleBackColor = true;
-			this->button30->UseWaitCursor = true;
+			//this->button30->UseWaitCursor = true;
+			this->button30->Click += gcnew System::EventHandler(this, &MyForm::keyClicked);
 			// 
 			// suggestion1
 			// 
@@ -599,7 +632,7 @@ namespace Keyboard {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Cursor = System::Windows::Forms::Cursors::WaitCursor;
+			this->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->Name = L"MyForm";
 			this->Text = L" ";
 			this->UseWaitCursor = true;
@@ -609,50 +642,45 @@ namespace Keyboard {
 		}
 
 #pragma endregion
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	protected:
+		virtual property System::Windows::Forms::CreateParams ^CreateParams
+		{
+			System::Windows::Forms::CreateParams ^get() override
+			{
+				System::Windows::Forms::CreateParams ^cp = __super::CreateParams;
+				cp->ExStyle |= WS_EX_NOACTIVATE;
+				return cp;
+			}
+		}
 
-	}
-	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void Onbutton_click(System::Windows::Forms::Button^ sender, System::EventArgs e) {
-		sender->Text = L"CHANGED";
-	}
-	private: System::Void button27_Click(System::Object^  sender, System::EventArgs^  e) {
+	
+	private: System::Void keyClicked(System::Object^  sender, System::EventArgs^  e) {
 		//MessageBox.Show(L"You Clicked My Button!");
 		System::Windows::Forms::Button^ thisButton = ((System::Windows::Forms::Button^)sender);
+		HWND activeWindow = GetActiveWindow();
+		System::String ^textToEnter = thisButton->Text;
 
 		std::string localStr = "Local";
-		if (thisButton->Text == L"G") {
-			std::cout << L"\ncout: G" << std::endl;
-			std::cerr << L"cerr: G" << std::endl;
-			std::wcerr << L"wcerr: G" << std::endl;
+		if (thisButton->Text == L"Space") {
+			std::cout << L"\ncout: SPACE" << std::endl;
+			std::cerr << L"cerr: SPACE" << std::endl;
+			std::wcerr << L"wcerr: SPACE" << std::endl;
+			textToEnter = " ";
 		}
-		if (thisButton->Text == L"A") {
-			std::cout << L"\ncout: A" << std::endl;
-			std::cerr << L"cerr: A" << std::endl;
-			std::wcerr << L"wcerr: A" << std::endl;
+		else if (thisButton->Text == L"Enter") {
+			std::cout << L"\ncout: ENTER" << std::endl;
+			std::cerr << L"cerr: ENTER" << std::endl;
+			std::wcerr << L"wcerr: ENTER" << std::endl;
+			textToEnter = "{ENTER}";
 		}
-		else if (thisButton->Text == L"SPACE") {
-			buffer += L"o";
-			//const wchar_t^ buff = buffer.c_str();
-			std::cout << L"\ncout: SPACE1" << std::endl;
-			std::cerr << L"cerr: SPACE1" << std::endl;
-			std::wcerr << L"wcerr: SPACE1" << std::endl;
-			std::cout << L"BUFFER1: " << buffer.c_str() << std::endl;
-			std::wcerr << L"BUFFER1: " << buffer.c_str() << std::endl;
-			thisButton->Text = L"BUFFER CHANGED";
-			//thisButton->Text = buff;
-		}
-		else if (thisButton->Text == L"BUFFER CHANGED") {
-			buffer += L"o";
-			std::cout << L"\ncout: SPACE2" << std::endl;
-			std::cerr << L"cerr: SPACE2" << std::endl;
-			std::wcerr << L"wcerr: SPACE2" << std::endl;
-			std::cout << L"BUFFER2: " << buffer.c_str() << std::endl;
-			std::wcerr << L"BUFFER2: " << buffer.c_str() << std::endl;
-			thisButton->Text = L"SPACE";
+		else if (thisButton->Text == L"Backspace") {
+			std::cout << L"\ncout: ENTER" << std::endl;
+			std::cerr << L"cerr: ENTER" << std::endl;
+			std::wcerr << L"wcerr: ENTER" << std::endl;
+			textToEnter = "{BACKSPACE}";
 		}
 
+		SendKeys::Send(textToEnter);
 	}
 	};
 }
